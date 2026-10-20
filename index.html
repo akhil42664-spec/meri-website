@@ -1,436 +1,129 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#050816">
 
-<title>Akhil Shukla | Official Website</title>
-
-<meta name="description" content="Official website of Akhil Shukla — aspiring ethical hacker, gym enthusiast and entrepreneur.">
+<title>Dil Ki Awaaz ❤️</title>
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #050816;
-    color: #f5f7ff;
-    line-height: 1.7;
-}
-
-:root {
-    --blue: #00bfff;
-    --card: #0d1428;
-    --muted: #a8b2ca;
-}
-
-.container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-}
-
-header {
-    padding: 20px 0;
-    border-bottom: 1px solid #18233d;
-}
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-}
-
-.logo {
-    color: var(--blue);
-    font-size: 22px;
-    font-weight: bold;
-}
-
-nav a {
+    margin: 0;
+    min-height: 100vh;
+    background: #080b12;
     color: white;
-    text-decoration: none;
-    font-size: 14px;
-}
-
-.hero {
-    min-height: 85vh;
+    font-family: Arial, sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-    padding: 65px 0;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.tag {
-    color: var(--blue);
-    letter-spacing: 3px;
-    font-size: 12px;
-    font-weight: bold;
+    justify-content: center;
+    padding: 20px;
 }
 
 h1 {
-    font-size: clamp(38px, 7vw, 65px);
-    line-height: 1.15;
-    margin: 18px 0;
+    color: #00cfff;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
-h1 span {
-    color: var(--blue);
+p {
+    color: #ddd;
+    margin-bottom: 22px;
 }
 
-.hero p, .section-text {
-    color: var(--muted);
-}
-
-.buttons {
-    display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
-    margin-top: 28px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 12px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    background: var(--blue);
-    color: #04101c;
-}
-
-.btn-outline {
-    background: transparent;
-    color: white;
-    border: 1px solid var(--blue);
-}
-
-.photo-box {
-    width: 300px;
-    height: 360px;
-    flex-shrink: 0;
-    border: 2px solid var(--blue);
-    border-radius: 22px;
-    padding: 8px;
-    box-shadow: 0 0 35px #00bfff25;
-}
-
-.photo-box img {
+.poster {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 15px;
-}
-
-section {
-    padding: 65px 0;
-}
-
-.section-title {
-    font-size: 32px;
-    margin-bottom: 12px;
-}
-
-.section-title span {
-    color: var(--blue);
-}
-
-.section-text {
-    max-width: 700px;
-    margin-bottom: 28px;
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.card {
-    background: var(--card);
-    border: 1px solid #1b2947;
-    border-radius: 14px;
-    padding: 25px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    border-color: var(--blue);
-    transform: translateY(-4px);
-}
-
-.card h3 {
-    color: var(--blue);
-    margin-bottom: 10px;
-}
-
-.card p {
-    color: var(--muted);
-}
-
-.stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    margin-top: 30px;
-}
-
-.stat {
-    background: var(--card);
-    padding: 20px 10px;
-    text-align: center;
-    border-radius: 12px;
-    border: 1px solid #1b2947;
-}
-
-.stat strong {
-    display: block;
-    color: var(--blue);
-    font-size: 24px;
-}
-
-.stat span {
-    color: var(--muted);
-    font-size: 13px;
-}
-
-.business {
-    background: linear-gradient(135deg, #0d1428, #071d31);
-    border: 1px solid #173957;
+    max-width: 350px;
+    border: 2px solid #00cfff;
     border-radius: 18px;
-    padding: 30px;
+    box-shadow: 0 0 25px #00cfff66;
+    cursor: pointer;
+    transition: transform 0.2s;
 }
 
-.contact-box {
-    background: var(--card);
-    border: 1px solid #1b2947;
-    border-radius: 15px;
-    padding: 30px;
+.poster:active {
+    transform: scale(0.97);
 }
 
-footer {
-    border-top: 1px solid #18233d;
-    text-align: center;
-    padding: 25px 10px;
-    color: var(--muted);
-    font-size: 13px;
+button {
+    margin-top: 22px;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 30px;
+    background: #00cfff;
+    color: #061018;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
 
-footer span {
-    color: var(--blue);
-}
-
-@media (max-width: 700px) {
-    .hero {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding-top: 40px;
-    }
-
-    .photo-box {
-        width: 230px;
-        height: 280px;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
-    .grid {
-        grid-template-columns: 1fr;
-    }
-
-    .stats {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav {
-        flex-direction: column;
-    }
+#status {
+    margin-top: 15px;
+    color: #00cfff;
+    font-size: 15px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="container">
-        <nav>
-            <div class="logo">AKHIL SHUKLA.</div>
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#interests">Interests</a>
-            <a href="#business">Business</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
+<h1>Dil Ki Awaaz ❤️</h1>
 
-<main>
+<p>Touch Here To Listen 🎵</p>
 
-<section class="container hero" id="home">
+<img
+    id="poster"
+    class="poster"
+    src="file_000000008f7c821182c4b673e41abb67.png"
+    alt="Dil Ki Awaaz Poster"
+>
 
-    <div class="hero-text">
-        <div class="tag">WELCOME TO MY WORLD</div>
+<button id="playButton">TAP HERE ❤️</button>
 
-        <h1>I'm Akhil<br><span>Shukla.</span></h1>
+<p id="status">Tumhare liye ek special audio ❤️</p>
 
-        <p>
-            An aspiring ethical hacker, gym enthusiast and entrepreneur.
-            I believe in learning new skills, staying disciplined
-            and building something meaningful.
-        </p>
+<audio id="audio"
+    src="Kya hua baccha call kru 🥺 #shorts #ytshort - Sorav Sharma (2).mp3"
+    preload="auto">
+</audio>
 
-        <div class="buttons">
-            <a href="#about" class="btn">Discover My Story</a>
-            <a href="#contact" class="btn btn-outline">Contact Me</a>
-        </div>
-    </div>
+<script>
+const poster = document.getElementById("poster");
+const button = document.getElementById("playButton");
+const audio = document.getElementById("audio");
+const status = document.getElementById("status");
 
-    <div class="photo-box">
-        <img src="IMG20260610123931.jpg"alt="Akhil Shukla">
-    </div>
+let stopTimer;
 
-</section>
+function playMusic() {
+    clearTimeout(stopTimer);
 
-<section id="about">
-    <div class="container">
-        <h2 class="section-title">About <span>Me</span></h2>
+    audio.pause();
+    audio.currentTime = 0;
 
-        <p class="section-text">
-            I'm Akhil Shukla. I enjoy technology, fitness and business.
-            I am currently learning about ethical hacking and coding.
-            My goal is to improve myself, gain knowledge and create
-            opportunities through hard work.
-        </p>
+    audio.play()
+        .then(() => {
+            status.textContent = "Dil ki awaaz suno ❤️";
 
-        <div class="stats">
-            <div class="stat">
-                <strong>6 FT</strong>
-                <span>Height</span>
-            </div>
+            stopTimer = setTimeout(() => {
+                audio.pause();
+                audio.currentTime = 0;
+                status.textContent = "Dobara sunne ke liye tap karo ❤️";
+            }, 4000);
+        })
+        .catch(() => {
+            status.textContent =
+                "Audio nahi chala. Audio file ka naam check karo.";
+        });
+}
 
-            <div class="stat">
-                <strong>GYM</strong>
-                <span>Fitness Lifestyle</span>
-            </div>
-
-            <div class="stat">
-                <strong>TECH</strong>
-                <span>Learning & Exploring</span>
-            </div>
-
-            <div class="stat">
-                <strong>FOCUS</strong>
-                <span>Self Growth</span>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="interests">
-    <div class="container">
-        <h2 class="section-title">My <span>Interests</span></h2>
-
-        <p class="section-text">
-            The things I enjoy and the skills I want to develop.
-        </p>
-
-        <div class="grid">
-
-            <div class="card">
-                <h3>01 / Ethical Hacking</h3>
-                <p>
-                    Learning cybersecurity, computer networks
-                    and ethical hacking to understand how systems
-                    can be protected.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>02 / Gym & Fitness</h3>
-                <p>
-                    Training consistently, building strength
-                    and improving my physique through discipline.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>03 / Coding</h3>
-                <p>
-                    Exploring programming languages like Python
-                    and C++ and learning to build websites.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>04 / Introvert Mindset</h3>
-                <p>
-                    I prefer a quiet life, focused thinking
-                    and working on my goals.
-                </p>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section id="business">
-    <div class="container">
-        <h2 class="section-title">My <span>Business</span></h2>
-
-        <div class="business">
-            <h3>Akhil Ayurvedic Agency</h3>
-
-            <p class="section-text">
-                A business connected with my entrepreneurial journey.
-                I believe in building trust, learning from experience
-                and growing step by step.
-            </p>
-
-            <a href="#contact" class="btn">Get in Touch</a>
-        </div>
-    </div>
-</section>
-
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Let's <span>Connect</span></h2>
-
-        <div class="contact-box">
-            <p class="section-text">
-                Interested in technology, fitness or business?
-                You can connect with me on Instagram.
-            </p>
-
-            <a href="https://www.instagram.com/official_akhil_shukla/"
-               target="_blank"
-               rel="noopener noreferrer"
-               class="btn">
-                Visit My Instagram
-            </a>
-        </div>
-    </div>
-</section>
-
-</main>
-
-<footer>
-    © 2026 <span>Akhil Shukla</span> — Personal Website.
-    Built with passion.
-</footer>
+poster.addEventListener("click", playMusic);
+button.addEventListener("click", playMusic);
+</script>
 
 </body>
 </html>
