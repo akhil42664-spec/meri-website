@@ -1,0 +1,10 @@
+{
+  "name": "Dil Ki Awaaz",
+  "short_name": "Dil Ki Awaaz",
+  "description": "Akhil's music photo app",
+  "start_url": "/meri-website/",
+  "scope": "/meri-website/",
+  "display": "standalone",
+  "background_color": "#080b12",
+  "theme_color": "#00cfff"
+}
